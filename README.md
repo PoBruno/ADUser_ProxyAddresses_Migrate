@@ -1,6 +1,5 @@
 ###### Guide written by Bruno Gomes
 ## ActiveDirectory User ProxyAddresses Migrate
-> #
 * Export all users to CSV with ProxyAddresses. 
 * Model initial script to report - [Get-ADUser_ProxyAddresses.ps1](https://github.com/lorthe/ADUser_ProxyAddresses_Migrate/blob/a765048562d01cd6cb60b67a094373f5aa57f181/Get-ADUser_ProxyAddresses.ps1)
 
@@ -49,7 +48,6 @@ $AllUsers | Export-Csv -Encoding UTF8 -Path $Csvfile -NoTypeInformation -Delimit
 $AllUsers | Export-Csv -Delimiter ";"
 $Users = Import-CSV $PathFile -Delimiter ";"
 ```
-> #
 > Create a loop for each line in the CSV file by adding ProxyAddresses stating that each is separated by "," comma
 > ``` -add @{ProxyAddresses="$($ProxyAddresses)" -split ","} ```
 
