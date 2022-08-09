@@ -10,7 +10,10 @@ $Users = Import-CSV $PathFile -Delimiter ";"
 ForEach ($User in $Users){
     $SamAccountName = $User.SamAccountName
     $ProxyAddresses = $User.ProxyAddresses
+    #$EmailAddress = $User.EmailAddress
+    
     Set-ADUser $SamAccountName -add @{ProxyAddresses="$($ProxyAddresses)" -split ","}
+    #Set-ADUser -Identity $SamAccountName -EmailAddress $EmailAddress
 }
 
 #######
