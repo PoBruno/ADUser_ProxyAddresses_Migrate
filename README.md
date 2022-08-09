@@ -16,7 +16,7 @@ $AllUsers | Export-Csv -Delimiter ";"
 
 >for future steps, to insert the ProxyAddesses to set Powershell that the user information is separated by semicomma and in the ProxyAddresses column each SMTP is separated by a comma 
 
-``` -add @{ProxyAddresses="$($ProxyAddresses)" -split ","} ```
+> ``` -add @{ProxyAddresses="$($ProxyAddresses)" -split ","} ```
 
 - > NOTE : Complete script Adding ProxyAddresses 
 ```sh
